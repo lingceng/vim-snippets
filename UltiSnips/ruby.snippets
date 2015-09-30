@@ -1,5 +1,29 @@
 priority -50
 
+extends rails
+
+snippet delegate "delegate"
+delegate :${1:attribute}, to: :${2:model_name}, allow_nil: true, prefix: true
+endsnippet
+
+snippet defs "default_scope"
+default_scope -> {  order('${1:order_no DESC}') }
+endsnippet
+
+snippet ae "assert_equal" b
+assert_equal ${1}
+endsnippet
+
+snippet eq "assert_equal" b
+assert_equal ${1}
+endsnippet
+
+snippet def "def end"
+def ${1:function_name}
+  $0
+end
+endsnippet
+
 snippet "^#!" "#!/usr/bin/env ruby" r
 #!/usr/bin/env ruby
 $0
@@ -11,7 +35,7 @@ $0
 endsnippet
 
 snippet "\b(de)?f" "def <name>..." r
-def ${1:function_name}${2:(${3:*args})}
+def ${1:function_name}
 	$0
 end
 endsnippet

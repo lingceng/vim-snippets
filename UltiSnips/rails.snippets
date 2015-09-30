@@ -5,6 +5,16 @@ accepts_nested_attributes_for :${1:association_name}${2:${3:, :allow_destroy => 
 
 endsnippet
 
+snippet bp "binding.pry" b
+binding.pry
+endsnippet
+
+snippet resp "respond_to" b
+respond_to do |format|
+  ${1}
+end
+endsnippet
+
 snippet tcbi "Create binary column"
 t.binary :${1:title}${2:, :limit => ${3:2}.megabytes}
 $0
@@ -754,7 +764,7 @@ validates_numericality_of :${1:attribute}${2:, :on => :${3:create}, :message => 
 endsnippet
 
 snippet vp "validates_presence_of (vp)"
-validates_presence_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:can't be blank}"}
+validates_presence_of :${1:attribute}"}
 endsnippet
 
 snippet vpif "validates_presence_of if (vpif) 2"
@@ -762,7 +772,7 @@ validates_presence_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4
 endsnippet
 
 snippet vu "validates_uniqueness_of (vu)"
-validates_uniqueness_of :${1:attribute}${2:, :on => :${3:create}, :message => "${4:must be unique}"}
+validates_uniqueness_of :${1:attribute}"}
 endsnippet
 
 snippet vuif "validates_uniqueness_of if (vuif)"

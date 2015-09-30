@@ -9,6 +9,11 @@ if !exists("g:${1:MyUltraImportantVar}")
 endif
 endsnippet
 
+snippet p "Vundle Plugin" b
+Plugin '${0}'
+endsnippet
+
+
 snippet guard "script reload guard" b
 if exists('${1:did_`!p snip.rv = snip.fn.replace('.','_')`}') || &cp${2: || version < 700}
 	finish

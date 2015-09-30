@@ -7,6 +7,20 @@ snippet get "Get Elements"
 getElement${1/(T)|.*/(?1:s)/}By${1:T}${1/(T)|(I)|.*/(?1:agName)(?2:d)/}('$2')
 endsnippet
 
+snippet use "use strict" b
+"use strict";
+endsnippet
+
+snippet me "module.exports = " b
+module.exports = ${1}
+endsnippet
+
+snippet fun "function() {}" w
+function(${1}) {
+  ${0}
+}
+endsnippet
+
 snippet '':f "object method string"
 '${1:${2:#thing}:${3:click}}': function(element) {
 	${VISUAL}$0
