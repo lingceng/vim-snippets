@@ -75,6 +75,10 @@ def foldmarker():
 
 endglobal
 
+snippet now "Insert current date" i
+`date "+%Y-%m-%d %H:%M"`
+endsnippet
+
 snippet box "A nice box with the current comment symbol" b
 `!p
 box = make_box(len(t[1]))
